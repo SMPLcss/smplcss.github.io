@@ -1,0 +1,214 @@
+/* SMPL.css library - more at */
+/* This library is inspired from others libraries, check */
+/* This work is marked CC0 1.0. To view a copy of this mark, visit https://creativecommons.org/publicdomain/zero/1.0/ */
+
+:root {
+  --font-sans: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
+    Arial, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+    "DejaVu Sans Mono", monospace;
+  --color-bg: #ffffff;
+  --color-special: #1586c7;
+  --color-accent: #045b8d;
+  --color-light: #90d5ff;
+  --color-ultralight: #c6dbe9;
+  --color-border: black;
+  --color-mark: #fdf361;
+  --base: 1rem;
+  --base-width: 55rem;
+  --radius: 0.45rem;
+}
+
+/* PLEASE DO NOT EDIT BELOW THIS LINE!*/
+
+/* Reset CSS*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* Body */
+body {
+  background-color: var(--color-bg);
+  font-family: var(--font-sans);
+}
+
+/* Sections */
+main {
+  width: 55rem;
+  margin: auto; /* align center horizontally */
+}
+header {
+  display: block;
+  width: 100%;
+  background-color: var(--color-light);
+  border-bottom: 1px solid var(--color-border);
+  padding: 2rem 0 2rem 0;
+  text-align: center;
+}
+footer {
+  width: 55rem;
+  margin: 0.5rem auto;
+  border-top: 0.05rem solid var(--color-border);
+}
+
+/* Notice */
+.notice {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  background-color: var(--color-ultralight);
+  display: block;
+  box-sizing: border-box;
+  word-break: break-all;
+}
+
+/* Code */
+code {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  background-color: var(--color-bg);
+  display: block;
+  word-break: break-all;
+  font-size: calc(var(--base) * 1.35);
+  font-family: var(--font-mono);
+}
+
+/* Links */
+a:link,
+a:visited,
+a:active {
+  color: var(--color-special);
+}
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Text */
+h1 {
+  font-size: calc(var(--base) * 3);
+}
+h2 {
+  font-size: calc(var(--base) * 2.5);
+}
+h3 {
+  font-size: calc(var(--base) * 2);
+}
+
+p,
+li,
+label {
+  font-size: calc(var(--base) * 1.35);
+  line-height: 2rem;
+}
+mark {
+  border-radius: 0.35rem;
+  padding: 0.07rem 0.5rem 0.07rem 0.5rem;
+  background-color: var(--color-mark);
+}
+
+/* Forms */
+button {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: calc(var(--base) * 1.1);
+  padding: 1rem;
+  background-color: var(--color-special);
+  color: white;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  text-decoration: none;
+}
+button:hover {
+  background-color: var(--color-accent);
+}
+
+input[type="text"] {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: calc(var(--base) * 1.35);
+  outline: none;
+  display: inline;
+}
+
+/* Grid */
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+/* Mobile mode */
+@media (max-width: 900px) {
+  /* Fix section width */
+  main {
+    width: 95%;
+    margin: auto;
+  }
+  footer {
+    width: 97%;
+  }
+
+  /* Better text size */
+  h1 {
+    font-size: calc(var(--base) * 2.5);
+  }
+  h2 {
+    font-size: calc(var(--base) * 2);
+  }
+  p,
+  li,
+  label,
+  input[type="text"],
+  code {
+    font-size: calc(var(--base) * 1.05);
+    line-height: 2rem;
+  }
+}
